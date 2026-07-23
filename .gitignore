@@ -1,0 +1,22 @@
+# Environment and API Secrets
+.env
+client_secrets.json
+token.json
+
+# Generated Output files
+output/*
+!output/.gitkeep
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.idea/
+.vscode/
