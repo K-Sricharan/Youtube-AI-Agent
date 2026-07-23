@@ -87,6 +87,14 @@ class PublishingPipeline:
             privacy_status=privacy_status
         )
 
+        # Cleanup temporary thumbnail file from output folder
+        if Path(thumbnail_path).exists():
+            try:
+                os.remove(thumbnail_path)
+                logger.info(f"Cleaned up temporary thumbnail file: {thumbnail_path}")
+            except Exception as clean_err:
+                logger.warning(f"Could not remove temporary thumbnail file '{thumbnail_path}': {clean_err}")
+
         logger.info("=" * 60)
         logger.info("PIPELINE EXECUTION COMPLETED SUCCESSFULLY!")
         logger.info(f"Video URL: {upload_result.get('url')}")
@@ -159,6 +167,14 @@ class PublishingPipeline:
             thumbnail_path=thumbnail_path,
             privacy_status=privacy_status
         )
+
+        # Cleanup temporary thumbnail file from output folder
+        if Path(thumbnail_path).exists():
+            try:
+                os.remove(thumbnail_path)
+                logger.info(f"Cleaned up temporary thumbnail file: {thumbnail_path}")
+            except Exception as clean_err:
+                logger.warning(f"Could not remove temporary thumbnail file '{thumbnail_path}': {clean_err}")
 
         logger.info("=" * 60)
         logger.info("USER VIDEO PUBLISHED SUCCESSFULLY!")
