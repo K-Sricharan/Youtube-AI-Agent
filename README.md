@@ -94,8 +94,8 @@ requirements.txt                 # Project dependencies
 
 ### 1. Clone & Install Dependencies
 ```bash
-git clone https://github.com/K-Sricharan/Youtube-Automation.git
-cd Youtube-Automation
+git clone https://github.com/K-Sricharan/Youtube-AI-Agent.git
+cd Youtube-AI-Agent
 pip install -r requirements.txt
 ```
 
